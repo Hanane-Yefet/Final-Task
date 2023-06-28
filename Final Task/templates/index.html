@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apartment Price Prediction</title>
+</head>
+<body>
+    <h1>Apartment Price Prediction</h1>
+    <form method="POST" action="/predict">
+        <label for="City">City:</label>
+        <input type="text" name="City" required><br><br>
+        
+        <label for="type">Type:</label>
+        <input type="text" name="type" required><br><br>
+        
+        <label for="room_number">Number of Rooms:</label>
+        <input type="number" name="room_number"><br><br>
+        
+        <label for="Area">Area (sqm):</label>
+        <input type="number" step="0.01" name="Area"><br><br>
+        
+        <label for="city_area">City Area:</label>
+        <input type="text" name="city_area"><br><br>
+        
+        <label for="hasElevator">Has Elevator:</label>
+        <input type="checkbox" name="hasElevator"><br><br>
+        
+        <label for="hasParking">Has Parking:</label>
+        <input type="checkbox" name="hasParking"><br><br>
+        
+        <label for="hasBars">Has Bars:</label>
+        <input type="checkbox" name="hasBars"><br><br>
+        
+        <label for="hasStorage">Has Storage:</label>
+        <input type="checkbox" name="hasStorage"><br><br>
+        
+        <label for="condition">Condition:</label>
+        <input type="text" name="condition"><br><br>
+        
+        <label for="hasAirCondition">Has Air Condition:</label>
+        <input type="checkbox" name="hasAirCondition"><br><br>
+        
+        <label for="hasBalcony">Has Balcony:</label>
+        <input type="checkbox" name="hasBalcony"><br><br>
+        
+        <label for="hasMamad">Has Mamad:</label>
+        <input type="checkbox" name="hasMamad"><br><br>
+        
+        <label for="handicapFriendly">Handicap Friendly:</label>
+        <input type="checkbox" name="handicapFriendly"><br><br>
+        
+        <label for="floor">Floor:</label>
+        <input type="number" name="floor"><br><br>
+        
+        <label for="total_floors">Total Floors:</label>
+        <input type="number" name="total_floors"><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+    <h2>Prediction Result:</h2>
+    <p>{{ prediction_text }}</p>
+    {% endif %}
+</body>
+</html>
